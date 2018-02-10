@@ -5,7 +5,7 @@ import { WdetectService } from './wdetect.service';
 describe('WdetectService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [WdetectService]
+      providers: [WdetectService],
     });
   });
 

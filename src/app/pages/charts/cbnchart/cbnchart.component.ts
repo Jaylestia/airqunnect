@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cbnchart',
+  selector: 'ngx-cbnchart',
   templateUrl: './cbnchart.component.html',
-  styleUrls: ['./cbnchart.component.scss']
+  styleUrls: ['./cbnchart.component.scss'],
 })
 export class CbnchartComponent implements OnInit {
 

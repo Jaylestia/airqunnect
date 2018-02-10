@@ -8,6 +8,7 @@ import { ChartjsComponent } from './chartjs/chartjs.component';
 import {CbnchartComponent} from './cbnchart/cbnchart.component';
 import {NtgchartComponent} from './ntgchart/ntgchart.component';
 import {SlfchartComponent} from './slfchart/slfchart.component';
+import {AirbeComponent} from './airbe/airbe.component';
 
 const routes: Routes = [{
   path: '',
@@ -30,6 +31,9 @@ const routes: Routes = [{
   }, {
       path: 'slfchart',
       component: SlfchartComponent,
+  }, {
+      path: 'airbe',
+      component: AirbeComponent,
   }],
 }];
 

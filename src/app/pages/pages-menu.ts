@@ -111,6 +111,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
             title: 'Sulfur Dioxide',
             link: '/pages/charts/slfchart',
         },
+        {
+            title: 'Data Acquisition',
+            link: '/pages/charts/airbe',
+        },
 /*      {
         title: 'Echarts',
         link: '/pages/charts/echarts',

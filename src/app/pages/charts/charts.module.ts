@@ -28,6 +28,7 @@ import { EchartsRadarComponent } from './echarts/echarts-radar.component';
 import { CbnchartComponent } from './cbnchart/cbnchart.component';
 import { NtgchartComponent } from './ntgchart/ntgchart.component';
 import { SlfchartComponent } from './slfchart/slfchart.component';
+import { AirbeComponent } from './airbe/airbe.component';
 
 const components = [
   ChartjsBarComponent,
@@ -52,6 +53,7 @@ const components = [
 
 @NgModule({
   imports: [ThemeModule, ChartsRoutingModule, NgxEchartsModule, NgxChartsModule, ChartModule],
-  declarations: [...routedComponents, ...components, CbnchartComponent, NtgchartComponent, SlfchartComponent],
+  declarations: [...routedComponents, ...components, CbnchartComponent, NtgchartComponent,
+      SlfchartComponent, AirbeComponent],
 })
 export class ChartsModule {}

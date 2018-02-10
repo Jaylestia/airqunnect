@@ -1,62 +1,210 @@
 <div class="row">
-  <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Airmon - Stationary" type="primary">
-      <img src="assets/images/stationary.png" style="max-height: 80%; max-width:80%;">
-      <i class=""></i>
-    </ngx-status-card>
-  </div>
+    <div class="col-xxxl-3 col-md-6">
+        <ngx-status-card title="Airmon - Stationary" type="primary">
+            <img src="assets/images/stationary.png" style="max-height: 80%; max-width:80%;">
+            <i class=""></i>
+        </ngx-status-card>
+    </div>
 
-  <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Airasp - Handheld" type="success">
-      <img src="assets/images/handheld.png" style="max-height: 80%; max-width:80%;">
-      <i class=""></i>
-    </ngx-status-card>
-  </div>
+    <div class="col-xxxl-3 col-md-6">
+        <ngx-status-card title="Airasp - Handheld" type="success">
+            <img src="assets/images/handheld.png" style="max-height: 80%; max-width:80%;">
+            <i class=""></i>
+        </ngx-status-card>
+    </div>
 
-<!--  <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Wireless Audio" type="info">
-      <i class="nb-audio"></i>
-    </ngx-status-card>
-  </div>
+    <!--  <div class="col-xxxl-3 col-md-6">
+        <ngx-status-card title="Wireless Audio" type="info">
+          <i class="nb-audio"></i>
+        </ngx-status-card>
+      </div>
 
-  <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Coffee Maker" type="warning">
-      <i class="nb-coffee-maker"></i>
-    </ngx-status-card>
-  </div>-->
+      <div class="col-xxxl-3 col-md-6">
+        <ngx-status-card title="Coffee Maker" type="warning">
+          <i class="nb-coffee-maker"></i>
+        </ngx-status-card>
+      </div>-->
 </div>
 
 <div class="row">
-  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-    <ngx-temperature></ngx-temperature>
-  </div>
+    <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+        <ngx-temperature></ngx-temperature>
+    </div>
 
-  <div class="col-xxxl-9 col-xxl-8 col-lg-7 col-md-6">
-    <ngx-electricity></ngx-electricity>
-  </div>
+    <div class="col-xxxl-9 col-xxl-8 col-lg-7 col-md-6">
+        <ngx-electricity></ngx-electricity>
+    </div>
 </div>
 
 <div class="row">
-  <div class="col-xxxl-9 col-xl-12">
-    <ngx-rooms></ngx-rooms>
-  </div>
+    <div class="col-xxxl-9 col-xl-12">
+        <ngx-rooms></ngx-rooms>
+    </div>
 
-  <div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-6">
-    <ngx-contacts></ngx-contacts>
-  </div>
+    <div class="col-lg-12">
+        <nb-card>
+            <nb-card-header>News and Articles</nb-card-header>
+            <nb-card-body>
 
-  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-    <ngx-solar [chartValue]="72"></ngx-solar>
+                <div class="row">
 
-    <ngx-kitten></ngx-kitten>
-  </div>
 
-  <div class="col-xxxl-3 col-xxl-4 col-md-5">
-    <ngx-traffic></ngx-traffic>
-    <ngx-weather></ngx-weather>
-  </div>
 
-  <div class="col-xxxl-6 col-xxl-12 col-md-7">
-    <ngx-security-cameras></ngx-security-cameras>
-  </div>
+                <div class="col-lg-6">
+
+                <nb-card>
+                    <nb-card-header>Technology</nb-card-header>
+                    <nb-card-body>
+
+
+                            <h1>DENR Launches Real-Time Air Quality Monitoring System with EU support</h1>
+                            <span>01/06/2017 - 04:44</span>
+                            <img style="height:100%; width:100%; padding:1em;"
+                                 src="https://eeas.europa.eu/sites/eeas/files/switch-asia_20170601_0.jpg"/>
+                            <div *ngIf="showArticle">
+                                <p class="justify-content-center">
+                                    At the request of the Department of Environment and Natural Resources (DENR), the European
+                                    Union
+                                    has been supporting the implementation of the Philippine Clean Air Act through the EU-funded
+                                    SWITCH-Asia
+                                    programme. The EU provided technical assistance and expertise to support the generation of
+                                    real-time
+                                    data on air quality for the Metro Manila airshed, by developing methodologies, real-time
+                                    data
+                                    transmission approaches and software.
+
+                                    EU Ambassador Franz Jessen said: "The EU is proud to be supporting the Philippines on the
+                                    implementation
+                                    of the Clean Air Act. Despite continued efforts to reduce emissions of harmful air
+                                    pollutants, air
+                                    pollution remains a worldwide concern. Improving air quality while keeping the climate
+                                    hospitable is a
+                                    complex process which requires a thorough understanding of what is causing air pollution and
+                                    climate
+                                    change, what can be done to tackle both, and a prioritisation of measures to preserve a
+                                    life-friendly
+                                    atmosphere everywhere on Earth."
+
+                                    Through this collaboration between the EU and the DENR, real-time data on the Air Quality
+                                    Index (AQI)
+                                    for Metro Manila is available. The provision of real-time Air Quality Index Values (AQI) for
+                                    criteria
+                                    pollutants will enable public authorities to monitor air quality, to propose actions to
+                                    protect public
+                                    health at different AQI levels and to formulate effective air quality management strategies.
+                                    The air
+                                    quality data is available to the public at the following link: www.airqualitymanila.com .
+
+                                    Background on the programme
+
+                                    The policy support component of the SWITCH-Asia programme in the Philippines is a technical
+                                    assistance
+                                    worth 3.5 million euros to the Government of the Philippines that is aligned with the
+                                    Philippine
+                                    Development Plan 2011-2016 and 2017-2022. It supports the Government in strengthening policy
+                                    initiatives
+                                    in the following areas:
+
+                                    Support to the Department of Energy (DoE) on energy efficiency;
+                                    Support to the Government Procurement Policy Board Technical Support Office (GPPB-TSO) and
+                                    to the
+                                    Department of Budget Management Procurement Service (DBM-PS) on green public procurement;
+                                    Support to the Department of Environment and Natural Resources (DENR) on environmental
+                                    education and on
+                                    the implementation of the Clean Air Act.
+                                    A unique element of the programme in the Philippines is an approach that uses local
+                                    socio-cultural
+                                    values to drive sustainable practices among different stakeholders. The values of Bayanihan,
+                                    Pagtitipid,
+                                    Malasakit that are close to the heart of Filipinos have been conceptualized as the spirit of
+                                    ‘Luntiang
+                                    Puso’ to create awareness on sustainable development.
+
+                                    Operating in 18 Asian developing countries with overall funding of more than 300 million
+                                    euros
+                                    (2007-2020), SWITH-Asia is the EU's programme focusing on sustainable consumption and
+                                    production as an
+                                    approach to development. The programme promotes economic prosperity and poverty reduction in
+                                    Asia by
+                                    encouraging a sustainable approach to growth with positive environmental and social impacts.
+
+                                    Media Contact
+
+                                    Ram Bucoy, FleishmanHillard, ram.bucoy@fleishman.com ; Tel 02-813 7925
+                                    Pao Goze, FleishmanHillard, pao.goze@fleishman.com ; Tel: 02-892 78938
+
+                                    Thelma Gecolea, EU Delegation to the Philippines, Thelma.GECOLEA@eeas.europa.eu ; Tel 02-859
+                                    5124
+                                </p>
+                                <p>For more information <a
+                                        href="https://eeas.europa.eu/delegations/china/27227/denr-launches-real-time-air-quality-monitoring-system-eu-support_en" target="_blank">click
+                                    here</a>
+                                </p>
+                                <p>Sources: <a href="https://eeas.europa.eu/sites/eeas/files/20170601_01_en_0.pdf" target="_blank">PDF
+                                    Article</a></p>
+
+                            </div>
+                            <a href="#" onclick="return false;" (click)="ToggleShowArticle()">{{ read }}</a>
+
+
+
+
+                    </nb-card-body>
+                </nb-card>
+
+                </div>
+
+                <div class="col-lg-6">
+                <nb-card>
+                    <nb-card-header>Law and Constitution</nb-card-header>
+                    <nb-card-body>
+
+                            <h1>Philippine Clean Air Act of 1999</h1>
+                            <span>CHAN ROBLES VIRTUAL LAW LIBRARY</span>
+                            <img style="height:100%; width:100%; padding:1em;"
+                                 src="https://eeas.europa.eu/sites/eeas/files/switch-asia_20170601_0.jpg"/>
+                            <div *ngIf="showArticle">
+
+                                <p>You can read it in this link</p>
+                                <a href="http://pepp.emb.gov.ph/wp-content/uploads/2016/06/RA-8749-Philippine-Clean-Air-Act-of-1999.pdf">PDF SOURCES</a>
+                                <a href="http://www.chanrobles.com/philippinecleanairact.htm#.Wn6jAnVubmg">Web view</a>
+
+                            </div>
+
+
+
+
+                    </nb-card-body>
+                </nb-card>
+
+                </div>
+                </div>
+            </nb-card-body>
+        </nb-card>
+
+
+
+
+    </div>
+
+
+
+    <div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-6">
+        <ngx-contacts></ngx-contacts>
+    </div>
+
+    <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+        <ngx-solar [chartValue]="72"></ngx-solar>
+
+        <ngx-kitten></ngx-kitten>
+    </div>
+
+    <div class="col-xxxl-3 col-xxl-4 col-md-5">
+        <ngx-traffic></ngx-traffic>
+        <ngx-weather></ngx-weather>
+    </div>
+
+    <div class="col-xxxl-6 col-xxl-12 col-md-7">
+        <ngx-security-cameras></ngx-security-cameras>
+    </div>
 </div>

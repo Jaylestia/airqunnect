@@ -8,7 +8,7 @@ describe('SlfchartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SlfchartComponent ]
+      declarations: [ SlfchartComponent ],
     })
     .compileComponents();
   }));

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ntgchart',
+  selector: 'ngx-ntgchart',
   templateUrl: './ntgchart.component.html',
-  styleUrls: ['./ntgchart.component.scss']
+  styleUrls: ['./ntgchart.component.scss'],
 })
 export class NtgchartComponent implements OnInit {
 

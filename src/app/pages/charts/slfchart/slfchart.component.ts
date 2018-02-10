@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-slfchart',
+  selector: 'ngx-slfchart',
   templateUrl: './slfchart.component.html',
-  styleUrls: ['./slfchart.component.scss']
+  styleUrls: ['./slfchart.component.scss'],
 })
 export class SlfchartComponent implements OnInit {
 

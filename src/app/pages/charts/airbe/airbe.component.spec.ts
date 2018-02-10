@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NtgchartComponent } from './ntgchart.component';
+import { AirbeComponent } from './airbe.component';
 
-describe('NtgchartComponent', () => {
-  let component: NtgchartComponent;
-  let fixture: ComponentFixture<NtgchartComponent>;
+describe('AirbeComponent', () => {
+  let component: AirbeComponent;
+  let fixture: ComponentFixture<AirbeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NtgchartComponent ],
+      declarations: [ AirbeComponent ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NtgchartComponent);
+    fixture = TestBed.createComponent(AirbeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
