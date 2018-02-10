@@ -32,9 +32,12 @@ export class NotificationsComponent {
   animations: string[] = ['fade', 'flyLeft', 'flyRight', 'slideDown', 'slideUp'];
   positions: string[] = ['toast-top-full-width', 'toast-bottom-full-width', 'toast-top-left', 'toast-top-center',
     'toast-top-right', 'toast-bottom-right', 'toast-bottom-center', 'toast-bottom-left', 'toast-center'];
-  questions: string[] = ['What is an air?' , 'What year when sulfur dioxide was discovered?'];
-  answers: string[] = ['Air is important', 'Okay'];
-  trivias: string[] = ['Air is another term for', 'Its really okay']
+  questions: string[] = ['What is an air?' , 'What is air pollutants?',
+      'What is Carbon Monoxide?'];
+  answers: string[] = ['The invisible gaseous substance surrounding the earth, a mixture mainly of oxygen and' +
+  ' nitrogen.', 'Any substance in air that could, in high enough concentration, harm animals, humans, vegetation,' +
+  ' and/or materials.'];
+  trivias: string[] = ['Air is another term for', 'Its really okay', '']
 
 
 
