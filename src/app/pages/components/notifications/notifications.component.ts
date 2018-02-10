@@ -15,11 +15,13 @@ export class NotificationsComponent {
 
   position = 'toast-top-right';
   animationType = 'fade';
-  title = 'HI there!';
-  content = `I'm cool toaster!`;
+  title = 'Air Quality Monitoring Platform!';
+  content = ``;
   timeout = 5000;
   toastsLimit = 5;
-  type = 'default';
+  type = 'info';
+  question = 'Pick a question';
+  order = '';
 
   isNewestOnTop = true;
   isHideOnClick = true;
@@ -30,11 +32,16 @@ export class NotificationsComponent {
   animations: string[] = ['fade', 'flyLeft', 'flyRight', 'slideDown', 'slideUp'];
   positions: string[] = ['toast-top-full-width', 'toast-bottom-full-width', 'toast-top-left', 'toast-top-center',
     'toast-top-right', 'toast-bottom-right', 'toast-bottom-center', 'toast-bottom-left', 'toast-center'];
+  questions: string[] = ['What is an air?' , 'What year when sulfur dioxide was discovered?'];
+  answers: string[] = ['Air is important', 'Okay'];
+  trivias: string[] = ['Air is another term for', 'Its really okay']
+
+
 
   quotes = [
     { title: null, body: 'We rock at <i>Angular</i>' },
     { title: null, body: 'Titles are not always needed' },
-    { title: null, body: 'Toastr rock!' },
+    { title: null, body: 'Toaster rock!' },
     { title: 'What about nice html?', body: '<b>Sure you <em>can!</em></b>' },
   ];
 

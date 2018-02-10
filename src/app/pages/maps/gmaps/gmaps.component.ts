@@ -16,6 +16,6 @@ import { Component } from '@angular/core';
 })
 export class GmapsComponent {
 
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 8.4835;
+  lng = 124.6616;
 }

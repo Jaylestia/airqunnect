@@ -8,24 +8,24 @@ import { TreeModel } from 'ng2-tree';
 export class TreeComponent {
 
   tree: TreeModel = {
-    value: 'Programming languages by programming paradigm',
+    value: 'Programming tools and frameworks we used',
     children: [{
-      value: 'Object-oriented programming',
+      value: 'Web Application',
       children: [{
-        value: 'Java',
+        value: 'Angular JS Framework',
       }, {
-        value: 'C++',
+        value: 'Javascript',
       }, {
-        value: 'C#',
+        value: 'Typescript',
       }],
     }, {
-      value: 'Prototype-based programming',
+      value: 'Mobile Application',
       children: [{
-        value: 'JavaScript',
+        value: 'Ionic Framework',
       }, {
-        value: 'CoffeeScript',
+        value: 'Javascript',
       }, {
-        value: 'Lua',
+        value: 'Java',
       }],
     }],
   };

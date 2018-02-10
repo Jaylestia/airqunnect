@@ -19,15 +19,19 @@ export class ChartjsBarComponent implements OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.data = {
-        labels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],
+        labels: ['2/1/2018', '2/3/2018', '2/4/2018', '2/6/2018', '2/7/2018' ],
         datasets: [{
-          data: [65, 59, 80, 81, 56, 55, 40],
-          label: 'Series A',
+          data: [0, 3805.778, 6463.78, 28.543, 28.543, 2.815],
+          label: 'Carbon Monoxide',
           backgroundColor: NbColorHelper.hexToRgbA(colors.primaryLight, 0.8),
         }, {
-          data: [28, 48, 40, 19, 86, 27, 90],
-          label: 'Series B',
+          data: [0, 0.393, 327.183, 0.036, 0.036],
+          label: 'Nitrogen Dioxide',
           backgroundColor: NbColorHelper.hexToRgbA(colors.infoLight, 0.8),
+        }, {
+            data: [0, 42.51, 5.277, 0.261, 0.382],
+            label: 'Sulfur Dioxide',
+            backgroundColor: NbColorHelper.hexToRgbA(colors.infoLight, 0.8),
         }],
       };
 

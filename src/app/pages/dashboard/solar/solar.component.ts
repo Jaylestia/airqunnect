@@ -8,13 +8,13 @@ declare const echarts: any;
   styleUrls: ['./solar.component.scss'],
   template: `
     <nb-card size="xsmall" class="solar-card">
-      <nb-card-header>Solar Energy Consumption</nb-card-header>
+      <nb-card-header>Solar - Battery Source Percentage</nb-card-header>
       <nb-card-body>
         <div echarts [options]="option" class="echart">
         </div>
         <div class="info">
-          <div class="value">6. 421 kWh</div>
-          <div class="details"><span>out of</span> 8.421 kWh</div>
+          <div class="value">0%</div>
+          <div class="details"><span>out of</span> 100% <br><span> No External Source Inserted</span></div>
         </div>
       </nb-card-body>
     </nb-card>
@@ -26,7 +26,7 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
 
   @Input('chartValue')
   set chartValue(value: number) {
-    this.value = value;
+    this.value = 0;
     if (this.option.series) {
       this.option.series[0].data[0].value = value;
       this.option.series[0].data[1].value = 100 - value;

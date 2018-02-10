@@ -3,7 +3,7 @@ import { NbThemeService } from '@nebular/theme';
 
 declare const echarts: any;
 
-const points = [300, 520, 435, 530, 730, 620, 660, 860];
+const points = [5, 4, 2, 4, 3, 1, 4, 5];
 
 @Component({
   selector: 'ngx-traffic-chart',
@@ -72,7 +72,7 @@ export class TrafficChartComponent implements AfterViewInit, OnDestroy {
           backgroundColor: trafficTheme.tooltipBg,
           borderColor: trafficTheme.tooltipBorderColor,
           borderWidth: 3,
-          formatter: '{c0} MB',
+          formatter: '{c0} kWh',
           extraCssText: trafficTheme.tooltipExtraCss,
         },
         series: [

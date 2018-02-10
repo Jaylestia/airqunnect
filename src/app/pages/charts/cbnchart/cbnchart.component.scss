@@ -1,0 +1,57 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  ngx-chartjs-pie,
+  ngx-chartjs-bar,
+  ngx-chartjs-line,
+  ngx-chartjs-multiple-xaxis,
+  ngx-chartjs-bar-horizontal,
+  ngx-chartjs-radar {
+    display: block;
+    height: nb-theme(card-height-medium);
+    width: 100%;
+
+    /deep/ chart {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.co-style {
+  height:100%;
+  width:100%;
+
+}
+
+.carb-mid {
+  display:block;
+  padding: 0 10em;
+  margin: 2.5em 0;
+}
+
+.cbn-comments {
+  list-style:none;
+}
+
+.cbn-comments > li {
+  padding:0.5em;
+}
+
+#carb-effects{
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.stat-list-chart > li {
+  list-style: none;
+}

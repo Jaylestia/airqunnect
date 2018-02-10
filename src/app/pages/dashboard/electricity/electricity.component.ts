@@ -12,9 +12,8 @@ export class ElectricityComponent implements OnDestroy {
 
   data: Array<any>;
 
-  type = 'week';
-  types = ['week', 'month', 'year'];
-
+  type = 'Carbon Monoxide';
+  types = ['Carbon Monoxide'/*, 'Sulfur Dioxide', 'Nitrogen Dioxide'*/];
   currentTheme: string;
   themeSubscription: any;
 

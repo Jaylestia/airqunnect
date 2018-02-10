@@ -5,6 +5,9 @@ import { ChartsComponent } from './charts.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { D3Component } from './d3/d3.component';
 import { ChartjsComponent } from './chartjs/chartjs.component';
+import {CbnchartComponent} from './cbnchart/cbnchart.component';
+import {NtgchartComponent} from './ntgchart/ntgchart.component';
+import {SlfchartComponent} from './slfchart/slfchart.component';
 
 const routes: Routes = [{
   path: '',
@@ -18,6 +21,15 @@ const routes: Routes = [{
   }, {
     path: 'chartjs',
     component: ChartjsComponent,
+  }, {
+      path: 'cbnchart',
+      component: CbnchartComponent,
+  }, {
+      path: 'ntgchart',
+      component: NtgchartComponent,
+  }, {
+      path: 'slfchart',
+      component: SlfchartComponent,
   }],
 }];
 

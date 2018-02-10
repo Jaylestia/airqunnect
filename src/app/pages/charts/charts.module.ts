@@ -25,6 +25,9 @@ import { EchartsMultipleXaxisComponent } from './echarts/echarts-multiple-xaxis.
 import { EchartsAreaStackComponent } from './echarts/echarts-area-stack.component';
 import { EchartsBarAnimationComponent } from './echarts/echarts-bar-animation.component';
 import { EchartsRadarComponent } from './echarts/echarts-radar.component';
+import { CbnchartComponent } from './cbnchart/cbnchart.component';
+import { NtgchartComponent } from './ntgchart/ntgchart.component';
+import { SlfchartComponent } from './slfchart/slfchart.component';
 
 const components = [
   ChartjsBarComponent,
@@ -38,8 +41,7 @@ const components = [
   D3PieComponent,
   D3AreaStackComponent,
   D3PolarComponent,
-  D3AdvancedPieComponent,
-  EchartsLineComponent,
+  D3AdvancedPieComponent,  EchartsLineComponent,
   EchartsPieComponent,
   EchartsBarComponent,
   EchartsMultipleXaxisComponent,
@@ -50,6 +52,6 @@ const components = [
 
 @NgModule({
   imports: [ThemeModule, ChartsRoutingModule, NgxEchartsModule, NgxChartsModule, ChartModule],
-  declarations: [...routedComponents, ...components],
+  declarations: [...routedComponents, ...components, CbnchartComponent, NtgchartComponent, SlfchartComponent],
 })
 export class ChartsModule {}

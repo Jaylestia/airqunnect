@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, Input } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 declare const echarts: any;
@@ -12,16 +12,26 @@ declare const echarts: any;
 })
 export class ElectricityChartComponent implements AfterViewInit, OnDestroy {
 
+    @Input() type;
   option: any;
   data: Array<any>;
   themeSubscription: any;
 
   constructor(private theme: NbThemeService) {
 
-    const points = [490, 490, 495, 500, 505, 510, 520, 530, 550, 580, 630,
-      720, 800, 840, 860, 870, 870, 860, 840, 800, 720, 200, 145, 130, 130,
-      145, 200, 570, 635, 660, 670, 670, 660, 630, 580, 460, 380, 350, 340,
-      340, 340, 340, 340, 340, 340, 340, 340];
+    const copoint = [0, 0, 3805.778, 6463.78, 0, 28.543,
+        2.815, 6.686, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+/*      const sopoint = [490, 490, 495, 500, 505, 510, 520, 530, 550, 580, 630,
+          720, 800, 840, 860, 870, 870, 860, 840, 800, 720, 200, 145, 130, 130,
+          145, 200, 570, 2000, 660, 670, 670, 660, 630, 580, 460, 380, 350, 340,
+          340, 340, 340, 340, 340, 340, 340, 340];
+
+      const nopoint = [490, 490, 495, 500, 505, 510, 520, 530, 550, 580, 630,
+          720, 800, 840, 860, 6000, 870, 860, 840, 800, 720, 200, 145, 130, 130,
+          145, 200, 570, 635, 660, 670, 670, 660, 630, 580, 460, 380, 350, 340,
+          340, 340, 340, 340, 340, 340, 340, 340];*/
 
     // const points = [];
     // let pointsCount = 100;
@@ -33,8 +43,7 @@ export class ElectricityChartComponent implements AfterViewInit, OnDestroy {
     //   let res = x**3 - 5*x + 17;
     //   points.push(Math.round(res * 25));
     // }
-
-    this.data = points.map((p, index) => ({
+    this.data = copoint.map((p, index) => ({
       label: (index % 5 === 3) ? `${Math.round(index / 5)}` : '',
       value: p,
     }));
@@ -69,7 +78,7 @@ export class ElectricityChartComponent implements AfterViewInit, OnDestroy {
             backgroundColor: eTheme.tooltipBg,
             borderColor: eTheme.tooltipBorderColor,
             borderWidth: 3,
-            formatter: '{c0} kWh',
+            formatter: '{c0} ppm',
             extraCssText: eTheme.tooltipExtraCss,
           },
           xAxis: {

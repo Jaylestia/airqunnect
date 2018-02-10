@@ -30,28 +30,28 @@ export class SmartTableComponent {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
+      date: {
+        title: 'Date',
+        type: 'date',
+      },
+      location: {
+        title: 'Location',
+        type: 'string',
+      },
+      duration: {
+        title: 'Duration (hrs)',
         type: 'number',
       },
-      firstName: {
-        title: 'First Name',
-        type: 'string',
+      cbn: {
+        title: 'Carbon Monoxide',
+        type: 'number',
       },
-      lastName: {
-        title: 'Last Name',
-        type: 'string',
+      ntg: {
+        title: 'Nitrogen Dioxide',
+        type: 'number',
       },
-      username: {
-        title: 'Username',
-        type: 'string',
-      },
-      email: {
-        title: 'E-mail',
-        type: 'string',
-      },
-      age: {
-        title: 'Age',
+      slf: {
+        title: 'Sulfur Dioxide',
         type: 'number',
       },
     },

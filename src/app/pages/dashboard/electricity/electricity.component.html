@@ -1,8 +1,10 @@
 <nb-card size="large">
   <div class="consumption-table">
     <div class="table-header">
-      <div>Electricity</div>
-      <div class="subtitle">Consumption</div>
+      <div class="text-center">Air quality sample data</div>
+      <div class="subtitle">LP: Lowest Point</div>
+        <div class="subtitle">HP: Highest Point</div>
+
     </div>
 
     <nb-tabset fullWidth>
@@ -13,7 +15,7 @@
             <span class="delta" [ngClass]="{ 'down': month.down }">{{ month.delta }}</span>
           </div>
           <div class="results">
-            <b>{{ month.kWatts }}</b> kWh / <b>{{ month.cost }}</b> USD
+            <b> LP: {{ month.kWatts }}</b> ppm <b><br>HP: {{ month.cost }}</b> ppm
           </div>
         </div>
       </nb-tab>
@@ -24,18 +26,18 @@
     <div class="chart-header">
       <div class="header-stats">
         <div class="stats-block">
-          <div class="subtitle">Consumed</div>
+          <div class="subtitle">Average PPM</div>
           <div>
             <span class="value">816</span>
-            <span class="unit">kWh</span>
+            <span class="unit">ppm</span>
           </div>
         </div>
 
         <div class="stats-block">
-          <div class="subtitle">Spent</div>
+          <div class="subtitle">Fund</div>
           <div>
-            <span class="value">291</span>
-            <span class="unit">USD</span>
+            <span class="value">0</span>
+            <span class="unit">Php</span>
           </div>
         </div>
       </div>
@@ -46,11 +48,18 @@
           {{ type }}
         </button>
         <ul class="dropdown-menu" ngbDropdownMenu>
-          <li class="dropdown-item" *ngFor="let t of types" (click)="type = t">{{ t }}</li>
+          <li class="dropdown-item" *ngFor="let t of types" (click)="type = t">{{ t }} </li>
         </ul>
       </div>
 
     </div>
-    <ngx-electricity-chart></ngx-electricity-chart>
+    <div>
+
+      <ngx-electricity-chart></ngx-electricity-chart>
+
+    </div>
+
+
+
   </div>
 </nb-card>

@@ -8,17 +8,17 @@ import { Component } from '@angular/core';
 export class SecurityCamerasComponent {
 
   cameras: any[] = [{
-    title: 'Camera #1',
-    source: 'assets/images/camera1.jpg',
+    title: 'Jaymi setting up the module',
+    source: 'assets/stationary-images/doc-a.1.jpg',
   }, {
-    title: 'Camera #2',
-    source: 'assets/images/camera2.jpg',
+    title: 'Data Gathering',
+    source: 'assets/stationary-images/doc-a.2.jpg',
   }, {
-    title: 'Camera #3',
-    source: 'assets/images/camera3.jpg',
+    title: 'Taking a picture after data gathering',
+    source: 'assets/stationary-images/doc-a.3.jpg',
   }, {
-    title: 'Camera #4',
-    source: 'assets/images/camera4.jpg',
+    title: 'Troubleshoot and setup',
+    source: 'assets/stationary-images/doc-a.4.jpg',
   }];
 
   selectedCamera: any = this.cameras[0];

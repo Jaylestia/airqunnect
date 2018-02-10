@@ -10,7 +10,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'FEATURES',
     group: true,
-  },
+  }/*,
   {
     title: 'UI Features',
     icon: 'nb-keypad',
@@ -59,16 +59,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/forms/layouts',
       },
     ],
-  },
+  }*/,
   {
-    title: 'Components',
+    title: 'Device details',
     icon: 'nb-gear',
     children: [
       {
-        title: 'Tree',
+        title: 'Components for hardware and software',
         link: '/pages/components/tree',
       }, {
-        title: 'Notifications',
+        title: 'Q & A',
         link: '/pages/components/notifications',
       },
     ],
@@ -92,21 +92,34 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Charts',
+    title: 'Data Analytics and chart',
     icon: 'nb-bar-chart',
     children: [
-      {
+        {
+            title: 'Gasses',
+            link: '/pages/charts/chartjs',
+        },
+        {
+            title: 'Carbon Monoxide',
+            link: '/pages/charts/cbnchart',
+        },
+        {
+            title: 'Nitrogen Dioxide',
+            link: '/pages/charts/ntgchart',
+        },
+        {
+            title: 'Sulfur Dioxide',
+            link: '/pages/charts/slfchart',
+        },
+/*      {
         title: 'Echarts',
         link: '/pages/charts/echarts',
       },
-      {
-        title: 'Charts.js',
-        link: '/pages/charts/chartjs',
-      },
+
       {
         title: 'D3',
         link: '/pages/charts/d3',
-      },
+      },*/
     ],
   },
   {
@@ -124,11 +137,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Tables',
+    title: 'Database',
     icon: 'nb-tables',
     children: [
       {
-        title: 'Smart Table',
+        title: 'Data Table',
         link: '/pages/tables/smart-table',
       },
     ],

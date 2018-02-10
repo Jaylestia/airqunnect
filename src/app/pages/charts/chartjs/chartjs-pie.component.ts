@@ -4,10 +4,11 @@ import { NbThemeService } from '@nebular/theme';
 @Component({
   selector: 'ngx-chartjs-pie',
   template: `
-    <chart type="pie" [data]="data" [options]="options"></chart>
+    <chart type="pie" [data]="data" [options]="options" ></chart>
   `,
 })
 export class ChartjsPieComponent implements OnDestroy {
+  data2: any;
   data: any;
   options: any;
   themeSubscription: any;
@@ -19,12 +20,20 @@ export class ChartjsPieComponent implements OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.data = {
-        labels: ['Download Sales', 'In-Store Sales', 'Mail Sales'],
+        labels: ['Carbon Monoxide', 'Nitrogen Dioxide', 'Sulfur Dioxide'],
         datasets: [{
-          data: [300, 500, 100],
+          data: [2060.1832, 65.5296, 9.686],
           backgroundColor: [colors.primaryLight, colors.infoLight, colors.successLight],
         }],
       };
+
+        this.data2 = {
+            labels: ['Carbon Monoxide', 'Nitrogen Dioxide', 'Sulfur Dioxide'],
+            datasets: [{
+                data: [500.1832, 279.5296, 9.686],
+                backgroundColor: [colors.primaryLight, colors.infoLight, colors.successLight],
+            }],
+        };
 
       this.options = {
         maintainAspectRatio: false,

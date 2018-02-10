@@ -1,14 +1,16 @@
-<div class="header">My Playlist</div>
+<div class="header">Air Quality Related Videos</div>
 
 <div class="body">
 
   <div class="track-info">
-    <div class="cover" style.background-image="url('{{track.cover}}')"></div>
+<!--    <div class="cover" style.background-image="url('{{track.cover}}')"></div>-->
+      <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/aMnDoXuTGS4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div class="details">
-      <h4>{{ track.name }}</h4>
-      <span>{{ track.artist }}</span>
+<!--      <h4>{{ track.name }}</h4>
+      <span>{{ track.artist }}</span>-->
     </div>
   </div>
+<!--
 
   <div class="progress-wrap">
     <input type="range" class="progress" [value]="getProgress()" min="0" max="100" step="0.01"
@@ -28,8 +30,10 @@
     <i class="nb-skip-forward next" (click)="next()"></i>
     <i class="nb-loop loop" [class.active]="player.loop" (click)="toggleLoop()"></i>
   </div>
+-->
 
 </div>
+
 
 <div class="footer">
 
@@ -44,3 +48,4 @@
   </div>
 
 </div>
+
