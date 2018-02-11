@@ -5,6 +5,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { MapsRoutingModule, routedComponents } from './maps-routing.module';
+import { GooglemapComponent } from './googlemap/googlemap.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { MapsRoutingModule, routedComponents } from './maps-routing.module';
   exports: [],
   declarations: [
     ...routedComponents,
+    GooglemapComponent,
   ],
 })
 export class MapsModule { }

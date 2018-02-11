@@ -8,12 +8,13 @@ export class ChartdataService {
                         , [0, 0, 0.393, 1.183, 0, 0.036, 0.036, 0.006, 0.12 , 0]
                         , [0, 0, 0.51, 0.277, 0, 0.261, 0.382, 0.013, 0, 0]
                         , [0, 0, 0.05778, 0.6378, 0, 0.28543, 0.02815, 0.06686, 0, 0]
-                        , [0, 200, 0.393, 1.183, 0, 0.036, 0.036, 0.006, 0.12 , 0]
-                        , [200, 0, 0.51, 0.277, 0, 0.261, 0.382, 0.013, 0, 0]];
+                        , [0, 0.7, 0.393, 1.183, 0, 0.036, 0.036, 0.006, 0.12 , 0]
+                        , [0.8, 0, 0.51, 0.277, 0, 0.261, 0.382, 0.013, 0, 0]];
 
   private chart_ave_data;
   private chart_date = ['2-1-18', '2-2-18', '2-3-18', '2-4-18', '2-5-18', '2-6-18'
                         , '2-7-18', '2-8-18', '2-9-18', '2-10-18' ];
+  private lat_long = [[8.4914, 8.4835, 8.4849, 8.4914, 8.4914] , [124.5944, 124.6616, 124.6510, 124.5944, 124.5944]];
 
   /* Rules of Array of Array
     1.Carbon Monoxide Data
@@ -22,11 +23,48 @@ export class ChartdataService {
     4.Average of Carbon
    */
 
+    private input_data = [
+        {
+            title: 'Carbon Monoxide',
+            months: [
+                { month: 'Feb 1 2018', delta: '0', down: true, kWatts: '0', cost: '0' },
+                { month: 'Feb 2 2018', delta: '0', down: true, kWatts: 'No Data', cost: 'No Data' },
+                { month: 'Feb 3 2018', delta: '0', down: true, kWatts: '4.6', cost: '46.8973' },
+
+            ],
+        },
+        {
+            title: 'Sulfur Dioxide',
+            active: true,
+            months: [
+                { month: 'Feb 1 2018', delta: '0', down: true, kWatts: '0', cost: '0' },
+                { month: 'Feb 2 2018', delta: '1.83', down: true, kWatts: 'No Data', cost: 'No Data' },
+                { month: 'Feb 3 2018', delta: '0', down: true, kWatts: '0.7', cost: '55.0782' },
+
+            ],
+        },
+        {
+            title: 'Nitrogen Dioxide',
+            months: [
+                { month: 'Feb 1 2018', delta: '0', down: true, kWatts: '0', cost: '0' },
+                { month: 'Feb 2 2018', delta: '0', down: true, kWatts: 'No Data', cost: 'No Data' },
+                { month: 'Feb 3 2018', delta: '0', down: true, kWatts: '0.2932', cost: '0.4780' },
+
+            ],
+        },
+    ];
+
   constructor() {
 
   }
+  getInputData() {
+      return this.input_data;
+  }
   getChartDate() {
       return this.chart_date;
+  }
+  getChartLocation() {
+      return this.lat_long;
   }
   getChartData() {
 

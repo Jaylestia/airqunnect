@@ -20,8 +20,6 @@ import { PlayerComponent } from './rooms/player/player.component';
 import { TrafficComponent } from './traffic/traffic.component';
 import { TrafficChartComponent } from './traffic/traffic-chart.component';
 
-
-
 @NgModule({
   imports: [
     ThemeModule,
@@ -45,6 +43,7 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
     SolarComponent,
     TrafficComponent,
     TrafficChartComponent,
+
   ],
 })
 export class DashboardModule { }

@@ -2,14 +2,16 @@
   <div class="consumption-table">
     <div class="table-header">
       <div class="text-center">Air quality sample data</div>
-      <div class="subtitle">LP: Lowest Point</div>
-        <div class="subtitle">HP: Highest Point</div>
+      <div class="subtitle text-center">LP: Lowest Point</div>
+        <div class="subtitle text-center">HP: Highest Point</div>
 
     </div>
 
     <nb-tabset fullWidth>
-      <nb-tab *ngFor="let year of data" [tabTitle]="year.title" [active]="year.active">
-        <div class="stats-month" *ngFor="let month of year.months">
+
+      <nb-tab *ngFor="let element of input_data" [tabTitle]="element.title" [active]="element.active">
+
+        <div class="stats-month" *ngFor="let month of element.months">
           <div>
             <span class="month">{{ month.month }}</span>
             <span class="delta" [ngClass]="{ 'down': month.down }">{{ month.delta }}</span>

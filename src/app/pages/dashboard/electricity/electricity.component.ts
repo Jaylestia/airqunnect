@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { ChartdataService} from '../../../@core/data/chartdata.service';
 
-import { ElectricityService } from '../../../@core/data/electricity.service';
 
 @Component({
   selector: 'ngx-electricity',
@@ -10,15 +10,15 @@ import { ElectricityService } from '../../../@core/data/electricity.service';
 })
 export class ElectricityComponent implements OnDestroy {
 
-  data: Array<any>;
+  input_data: Array<any>;
 
   type = 'Carbon Monoxide';
   types = ['Carbon Monoxide'/*, 'Sulfur Dioxide', 'Nitrogen Dioxide'*/];
   currentTheme: string;
   themeSubscription: any;
 
-  constructor(private eService: ElectricityService, private themeService: NbThemeService) {
-    this.data = this.eService.getData();
+  constructor(private eService: ChartdataService, private themeService: NbThemeService) {
+    this.input_data = this.eService.getInputData();
 
     this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {
       this.currentTheme = theme.name;

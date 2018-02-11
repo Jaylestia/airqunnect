@@ -29,7 +29,7 @@ export class ChartjsPieComponent implements OnDestroy {
             this.data = {
                 labels: ['Carbon Monoxide', 'Nitrogen Dioxide', 'Sulfur Dioxide'],
                 datasets: [{
-                    data: this.chart_ave_data,
+                    data: this.chart_ave_data[0],
                     backgroundColor: [colors.primaryLight, colors.infoLight, colors.successLight],
                 }],
             };

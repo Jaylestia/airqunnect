@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-header>Google Maps</nb-card-header>
+  <nb-card-body>
+    <agm-map [latitude]="latitude[0][0]" [longitude]="longitude[1][0]">
+        <div *ngFor="let item of lat_long[0]; let i = index;">
+            <agm-marker [latitude]="latitude[0][i]" [longitude]="longitude[1][i]"></agm-marker>
+
+        </div>
+    </agm-map>
+  </nb-card-body>
+</nb-card>

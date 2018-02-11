@@ -87,3 +87,4 @@ export class HandheldLineComponent implements OnDestroy {
         this.themeSubscription.unsubscribe();
     }
 }
+
