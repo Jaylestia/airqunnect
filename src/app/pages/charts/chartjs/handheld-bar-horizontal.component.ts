@@ -1,14 +1,14 @@
 import {Component, OnDestroy} from '@angular/core';
-import {NbThemeService, NbColorHelper} from '@nebular/theme';
+import {NbThemeService} from '@nebular/theme';
 import {ChartdataService} from '../../../@core/data/chartdata.service';
 
 @Component({
-    selector: 'ngx-chartjs-line',
+    selector: 'ngx-handheld-bar-horizontal',
     template: `
-        <chart type="line" [data]="data" [options]="options"></chart>
+        <chart type="horizontalBar" [data]="data" [options]="options"></chart>
     `,
 })
-export class ChartjsLineComponent implements OnDestroy {
+export class HandheldBarHorizontalComponent implements OnDestroy {
     data: any;
     options: any;
     themeSubscription: any;
@@ -28,20 +28,14 @@ export class ChartjsLineComponent implements OnDestroy {
             this.data = {
                 labels: this.chart_date,
                 datasets: [{
-                    data: this.chart_data[0],
-                    label: 'Carbon Monoxide',
-                    backgroundColor: NbColorHelper.hexToRgbA(colors.primary, 0.3),
-                    borderColor: colors.primary,
+                    label: 'Dataset 1',
+                    backgroundColor: colors.infoLight,
+                    borderWidth: 1,
+                    data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
                 }, {
-                    data: this.chart_data[1],
-                    label: 'Nitrogen Dioxide',
-                    backgroundColor: NbColorHelper.hexToRgbA(colors.danger, 0.3),
-                    borderColor: colors.danger,
-                }, {
-                    data: this.chart_data[2],
-                    label: 'Sulfur Dioxide',
-                    backgroundColor: NbColorHelper.hexToRgbA(colors.info, 0.3),
-                    borderColor: colors.info,
+                    label: 'Dataset 2',
+                    backgroundColor: colors.successLight,
+                    data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
                 },
                 ],
             };
@@ -49,6 +43,11 @@ export class ChartjsLineComponent implements OnDestroy {
             this.options = {
                 responsive: true,
                 maintainAspectRatio: false,
+                elements: {
+                    rectangle: {
+                        borderWidth: 2,
+                    },
+                },
                 scales: {
                     xAxes: [
                         {
@@ -64,7 +63,7 @@ export class ChartjsLineComponent implements OnDestroy {
                     yAxes: [
                         {
                             gridLines: {
-                                display: true,
+                                display: false,
                                 color: chartjs.axisLineColor,
                             },
                             ticks: {
@@ -74,6 +73,7 @@ export class ChartjsLineComponent implements OnDestroy {
                     ],
                 },
                 legend: {
+                    position: 'right',
                     labels: {
                         fontColor: chartjs.textColor,
                     },
@@ -84,5 +84,9 @@ export class ChartjsLineComponent implements OnDestroy {
 
     ngOnDestroy(): void {
         this.themeSubscription.unsubscribe();
+    }
+
+    private random() {
+        return Math.round(Math.random() * 100);
     }
 }

@@ -3,12 +3,12 @@ import {NbThemeService} from '@nebular/theme';
 import {ChartdataService} from '../../../@core/data/chartdata.service';
 
 @Component({
-    selector: 'ngx-chartjs-multiple-xaxis',
+    selector: 'ngx-handheld-multiple-xaxis',
     template: `
         <chart type="line" [data]="data" [options]="options"></chart>
     `,
 })
-export class ChartjsMultipleXaxisComponent implements OnDestroy {
+export class HandheldMultipleXaxisComponent implements OnDestroy {
     data: {};
     options: any;
     themeSubscription: any;

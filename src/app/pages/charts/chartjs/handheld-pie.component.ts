@@ -3,12 +3,12 @@ import {NbThemeService} from '@nebular/theme';
 import {ChartdataService} from '../../../@core/data/chartdata.service';
 
 @Component({
-    selector: 'ngx-chartjs-pie',
+    selector: 'ngx-handheld-pie',
     template: `
         <chart type="pie" [data]="data" [options]="options"></chart>
     `,
 })
-export class ChartjsPieComponent implements OnDestroy {
+export class HandheldPieComponent implements OnDestroy {
     data2: any;
     data: any;
     options: any;
@@ -29,7 +29,7 @@ export class ChartjsPieComponent implements OnDestroy {
             this.data = {
                 labels: ['Carbon Monoxide', 'Nitrogen Dioxide', 'Sulfur Dioxide'],
                 datasets: [{
-                    data: this.chart_ave_data,
+                    data: this.chart_ave_data[1],
                     backgroundColor: [colors.primaryLight, colors.infoLight, colors.successLight],
                 }],
             };

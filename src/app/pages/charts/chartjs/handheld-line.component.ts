@@ -3,12 +3,13 @@ import {NbThemeService, NbColorHelper} from '@nebular/theme';
 import {ChartdataService} from '../../../@core/data/chartdata.service';
 
 @Component({
-    selector: 'ngx-chartjs-line',
+    selector: 'ngx-handheld-line',
     template: `
         <chart type="line" [data]="data" [options]="options"></chart>
     `,
 })
-export class ChartjsLineComponent implements OnDestroy {
+
+export class HandheldLineComponent implements OnDestroy {
     data: any;
     options: any;
     themeSubscription: any;
@@ -28,17 +29,17 @@ export class ChartjsLineComponent implements OnDestroy {
             this.data = {
                 labels: this.chart_date,
                 datasets: [{
-                    data: this.chart_data[0],
+                    data: this.chart_data[3],
                     label: 'Carbon Monoxide',
                     backgroundColor: NbColorHelper.hexToRgbA(colors.primary, 0.3),
                     borderColor: colors.primary,
                 }, {
-                    data: this.chart_data[1],
+                    data: this.chart_data[4],
                     label: 'Nitrogen Dioxide',
                     backgroundColor: NbColorHelper.hexToRgbA(colors.danger, 0.3),
                     borderColor: colors.danger,
                 }, {
-                    data: this.chart_data[2],
+                    data: this.chart_data[5],
                     label: 'Sulfur Dioxide',
                     backgroundColor: NbColorHelper.hexToRgbA(colors.info, 0.3),
                     borderColor: colors.info,

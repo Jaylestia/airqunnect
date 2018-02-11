@@ -3,12 +3,12 @@ import {NbThemeService, NbColorHelper} from '@nebular/theme';
 import {ChartdataService} from '../../../@core/data/chartdata.service';
 
 @Component({
-    selector: 'ngx-chartjs-radar',
+    selector: 'ngx-handheld-radar',
     template: `
         <chart type="radar" [data]="data" [options]="options"></chart>
     `,
 })
-export class ChartjsRadarComponent implements OnDestroy {
+export class HandheldRadarComponent implements OnDestroy {
     options: any;
     data: {};
     themeSubscription: any;
@@ -28,12 +28,12 @@ export class ChartjsRadarComponent implements OnDestroy {
             this.data = {
                 labels: this.chart_date,
                 datasets: [{
-                    data: this.chart_data[0],
+                    data: this.chart_data[3],
                     label: 'Series A',
                     borderColor: colors.danger,
                     backgroundColor: NbColorHelper.hexToRgbA(colors.dangerLight, 0.5),
                 }, {
-                    data: this.chart_data[0],
+                    data: this.chart_data[3],
                     label: 'Series B',
                     borderColor: colors.warning,
                     backgroundColor: NbColorHelper.hexToRgbA(colors.warningLight, 0.5),

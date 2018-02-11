@@ -29,6 +29,12 @@ import { CbnchartComponent } from './cbnchart/cbnchart.component';
 import { NtgchartComponent } from './ntgchart/ntgchart.component';
 import { SlfchartComponent } from './slfchart/slfchart.component';
 import { AirbeComponent } from './airbe/airbe.component';
+import { HandheldLineComponent} from './chartjs/handheld-line.component';
+import {HandheldPieComponent} from './chartjs/handheld-pie.component';
+import {HandheldMultipleXaxisComponent} from './chartjs/handheld-multiple-xaxis.component';
+import {HandheldBarHorizontalComponent} from './chartjs/handheld-bar-horizontal.component';
+import {HandheldBarComponent} from './chartjs/handheld-bar.component';
+import {HandheldRadarComponent} from './chartjs/handheld-radar.component';
 
 const components = [
   ChartjsBarComponent,
@@ -49,11 +55,17 @@ const components = [
   EchartsAreaStackComponent,
   EchartsBarAnimationComponent,
   EchartsRadarComponent,
+  HandheldLineComponent,
+  HandheldPieComponent,
+  HandheldMultipleXaxisComponent,
+  HandheldBarHorizontalComponent,
+  HandheldBarComponent,
+  HandheldRadarComponent,
 ];
 
 @NgModule({
   imports: [ThemeModule, ChartsRoutingModule, NgxEchartsModule, NgxChartsModule, ChartModule],
   declarations: [...routedComponents, ...components, CbnchartComponent, NtgchartComponent,
-      SlfchartComponent, AirbeComponent],
+      SlfchartComponent, AirbeComponent, HandheldLineComponent],
 })
 export class ChartsModule {}

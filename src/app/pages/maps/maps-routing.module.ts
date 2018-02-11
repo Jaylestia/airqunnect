@@ -9,10 +9,10 @@ import { BubbleMapComponent } from './bubble/bubble-map.component';
 const routes: Routes = [{
   path: '',
   component: MapsComponent,
-  children: [{
+  children: [/*{
     path: 'gmaps',
     component: GmapsComponent,
-  }, {
+  },*/ {
     path: 'leaflet',
     component: LeafletComponent,
   }, {

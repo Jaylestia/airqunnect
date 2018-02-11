@@ -3,12 +3,12 @@ import {NbThemeService, NbColorHelper} from '@nebular/theme';
 import {ChartdataService} from '../../../@core/data/chartdata.service';
 
 @Component({
-    selector: 'ngx-chartjs-line',
+    selector: 'ngx-handheld-bar',
     template: `
-        <chart type="line" [data]="data" [options]="options"></chart>
+        <chart type="bar" [data]="data" [options]="options"></chart>
     `,
 })
-export class ChartjsLineComponent implements OnDestroy {
+export class HandheldBarComponent implements OnDestroy {
     data: any;
     options: any;
     themeSubscription: any;
@@ -28,32 +28,33 @@ export class ChartjsLineComponent implements OnDestroy {
             this.data = {
                 labels: this.chart_date,
                 datasets: [{
-                    data: this.chart_data[0],
+                    data: this.chart_data[3],
                     label: 'Carbon Monoxide',
-                    backgroundColor: NbColorHelper.hexToRgbA(colors.primary, 0.3),
-                    borderColor: colors.primary,
+                    backgroundColor: NbColorHelper.hexToRgbA(colors.primaryLight, 0.8),
                 }, {
-                    data: this.chart_data[1],
+                    data: this.chart_data[4],
                     label: 'Nitrogen Dioxide',
-                    backgroundColor: NbColorHelper.hexToRgbA(colors.danger, 0.3),
-                    borderColor: colors.danger,
+                    backgroundColor: NbColorHelper.hexToRgbA(colors.infoLight, 0.8),
                 }, {
-                    data: this.chart_data[2],
+                    data: this.chart_data[5],
                     label: 'Sulfur Dioxide',
-                    backgroundColor: NbColorHelper.hexToRgbA(colors.info, 0.3),
-                    borderColor: colors.info,
-                },
-                ],
+                    backgroundColor: NbColorHelper.hexToRgbA(colors.infoLight, 0.8),
+                }],
             };
 
             this.options = {
-                responsive: true,
                 maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    labels: {
+                        fontColor: chartjs.textColor,
+                    },
+                },
                 scales: {
                     xAxes: [
                         {
                             gridLines: {
-                                display: true,
+                                display: false,
                                 color: chartjs.axisLineColor,
                             },
                             ticks: {
@@ -72,11 +73,6 @@ export class ChartjsLineComponent implements OnDestroy {
                             },
                         },
                     ],
-                },
-                legend: {
-                    labels: {
-                        fontColor: chartjs.textColor,
-                    },
                 },
             };
         });
